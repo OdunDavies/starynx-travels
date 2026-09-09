@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Button } from "@/components/ui/button";
 import { JsonLd } from "@/components/json-ld";
+import { photo } from "@/lib/photo";
 import { breadcrumbSchema } from "@/lib/schema";
 import { pageHead } from "@/lib/seo";
 
@@ -11,7 +12,7 @@ export const Route = createFileRoute("/services/visa")({
       description:
         "Schengen, UK, US, Canada, UAE and more. Starynx Travels prepares visitor and student visa files for Nigerian travellers — checklists, cover letters, interview prep.",
       path: "/services/visa",
-      image: "/images/service-visa.jpg",
+      image: photo("/images/service-visa.jpg"),
     }),
   component: VisaPage,
 });
@@ -28,7 +29,7 @@ function VisaPage() {
       />
       <div className="relative h-[42svh] min-h-72 bg-ink">
         <img
-          src="/images/service-visa.jpg"
+          src={photo("/images/service-visa.jpg")}
           alt="Travel documents on a leather desk"
           className="absolute inset-0 size-full object-cover opacity-60"
         />

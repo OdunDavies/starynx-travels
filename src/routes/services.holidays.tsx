@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Button } from "@/components/ui/button";
 import { JsonLd } from "@/components/json-ld";
+import { photo } from "@/lib/photo";
 import { breadcrumbSchema } from "@/lib/schema";
 import { pageHead } from "@/lib/seo";
 
@@ -27,7 +28,7 @@ function HolidaysPage() {
       />
       <div className="relative h-[42svh] min-h-72 bg-ink">
         <img
-          src="/images/dest-portugal.jpg"
+          src={photo("/images/dest-portugal.jpg")}
           alt="Lisbon tram on a cobbled street"
           className="absolute inset-0 size-full object-cover opacity-70"
         />

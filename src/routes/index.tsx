@@ -7,6 +7,7 @@ import { DESTINATIONS } from "@/data/destinations";
 import { PROCESS_STEPS, SERVICES } from "@/data/services";
 import { FAQS } from "@/data/faqs";
 import { SITE } from "@/data/site";
+import { photo } from "@/lib/photo";
 import { faqSchema, organizationSchema } from "@/lib/schema";
 import { pageHead } from "@/lib/seo";
 
@@ -26,7 +27,7 @@ function Home() {
       <JsonLd data={[organizationSchema(), faqSchema()]} />
       <section className="relative min-h-[88svh] overflow-hidden bg-ink text-ivory">
         <img
-          src="/images/hero-cabin.jpg"
+          src={photo("/images/hero-cabin.jpg")}
           alt="Airplane cabin window at cruise altitude"
           className="absolute inset-0 size-full object-cover opacity-55"
         />
@@ -120,7 +121,7 @@ function Home() {
       <section className="mx-auto grid max-w-6xl gap-10 px-4 py-20 sm:px-6 lg:grid-cols-2">
         <div className="overflow-hidden rounded-xl bg-cream">
           <img
-            src="/images/hero-square.jpg"
+            src={photo("/images/hero-square.jpg")}
             alt="Airplane window and cabin seat"
             className="aspect-[4/3] w-full object-cover"
           />

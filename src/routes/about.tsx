@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Button } from "@/components/ui/button";
 import { JsonLd } from "@/components/json-ld";
 import { SITE } from "@/data/site";
+import { photo } from "@/lib/photo";
 import { breadcrumbSchema } from "@/lib/schema";
 import { pageHead } from "@/lib/seo";
 
@@ -28,7 +29,7 @@ function AboutPage() {
       <div className="grid lg:grid-cols-2">
         <div className="min-h-[40svh] bg-ink">
           <img
-            src="/images/hero-square.jpg"
+            src={photo("/images/hero-square.jpg")}
             alt="Airplane window and cabin seat"
             className="size-full object-cover opacity-80"
           />

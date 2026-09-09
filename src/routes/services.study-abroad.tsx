@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Button } from "@/components/ui/button";
 import { JsonLd } from "@/components/json-ld";
+import { photo } from "@/lib/photo";
 import { breadcrumbSchema } from "@/lib/schema";
 import { pageHead } from "@/lib/seo";
 
@@ -11,7 +12,7 @@ export const Route = createFileRoute("/services/study-abroad")({
       description:
         "Study abroad with Starynx Travels: programme matching, applications, SOP review, and student visas for the UK, Canada, Europe, and the United States.",
       path: "/services/study-abroad",
-      image: "/images/service-study.jpg",
+      image: photo("/images/service-study.jpg"),
     }),
   component: StudyPage,
 });
@@ -28,7 +29,7 @@ function StudyPage() {
       />
       <div className="relative h-[42svh] min-h-72 bg-ink">
         <img
-          src="/images/service-study.jpg"
+          src={photo("/images/service-study.jpg")}
           alt="Historic university quadrangle in autumn"
           className="absolute inset-0 size-full object-cover opacity-70"
         />

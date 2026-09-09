@@ -1,10 +1,12 @@
+import { photo } from "@/lib/photo";
+
 export const SERVICES = [
   {
     slug: "visa",
     href: "/services/visa",
     title: "Visa processing",
     eyebrow: "Documents, appointments, honesty",
-    image: "/images/service-visa.jpg",
+    image: photo("/images/service-visa.jpg"),
     summary:
       "Schengen, UK, US, Canada, UAE, and more. We assemble the file, check it against current checklists, and coach you for the appointment.",
     points: [
@@ -19,7 +21,7 @@ export const SERVICES = [
     href: "/services/study-abroad",
     title: "Study abroad",
     eyebrow: "Admissions to arrival",
-    image: "/images/service-study.jpg",
+    image: photo("/images/service-study.jpg"),
     summary:
       "Programme shortlists, applications, SOP review, and the student visa that follows. UK, Canada, Europe, and the United States.",
     points: [
@@ -34,7 +36,7 @@ export const SERVICES = [
     href: "/services/holidays",
     title: "Holidays & itineraries",
     eyebrow: "Trips you can actually file",
-    image: "/images/dest-portugal.jpg",
+    image: photo("/images/dest-portugal.jpg"),
     summary:
       "Europe, the Gulf, and beyond. We plan the itinerary, then handle the visa so the holiday is actually bookable.",
     points: [
